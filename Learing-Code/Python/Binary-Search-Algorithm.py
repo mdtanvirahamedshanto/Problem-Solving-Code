@@ -1,6 +1,5 @@
 def binarySearch(arr, l, r, x):
     while l <= r:
-
         mid = l + (r - l) // 2
 
         # Check if x is present at mid
