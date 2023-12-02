@@ -1,45 +1,38 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int bin_search (int arr[], int num, int tgt)
+
+// An iterative binary search function.
+int binarySearch(int arr[], int l, int r, int x)
 {
-    int beg = 0, end = num - 1;
-    // use loop to check all sorted elements
-    while (beg <= end)
-    {
-        /* get the mid value of sorted array and then compares with target element. */
-        int mid = (beg + end) /2;
-        if (tgt == arr[mid])
-        {
-            return mid; // when mid is equal to tgt value
-        }
-        // check tgt is less than mid value, discard left element
-        else if (tgt < arr[mid])
-        {
-            end = mid - 1;
-        }
-        // if the target is greater than the mid value, discard all elements
-        else {
-            beg = mid + 1;
-        }
+    while (l <= r) {
+        int m = l + (r - l) / 2;
+
+        // Check if x is present at mid
+        if (arr[m] == x)
+            return m;
+
+        // If x greater, ignore left half
+        if (arr[m] < x)
+            l = m + 1;
+
+        // If x is smaller, ignore right half
+        else
+            r = m - 1;
     }
-    // return -1 when target is not exists in the array
+
+    // If we reach here, then element was not present
     return -1;
 }
-int main ()
+
+// Driver code
+int main(void)
 {
-    // declaration of the arrays
-    int arr[] = { 5, 10, 15, 20, 25, 30, 37, 40};
-    int tgt = 25; // specified the target element
-    int num = sizeof (arr) / sizeof (arr[0]);
-    // declare pos variable to get the position of the specified element
-    int pos = bin_search (arr, num, tgt);
-    if (pos != 1)
-    {
-        cout << " Element is found at position " << (pos + 1)<< endl;
-    }
-    else
-    {
-        cout << " Element is not found in the array" << endl;
-    }
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int result = binarySearch(arr, 0, n - 1, x);
+    (result == -1)
+        ? cout << "Element is not present in array"
+        : cout << "Element is present at index " << result;
     return 0;
 }
