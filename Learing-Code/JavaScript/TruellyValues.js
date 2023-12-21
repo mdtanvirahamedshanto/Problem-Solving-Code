@@ -13,6 +13,8 @@ const mixedArr = [
 //     }
 // });
 
+
+//shortcut
 const turearr = mixedArr.filter(Boolean);
 
 // console.log(trueArray);
