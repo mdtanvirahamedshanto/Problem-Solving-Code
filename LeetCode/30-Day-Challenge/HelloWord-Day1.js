@@ -1,7 +1,3 @@
-createHelloWord = function(){
-    return function(...args){
-        return "Hello Word"
-    }
-}
-
-const a = createHelloWord();
+function createHelloWorld() {
+    return function() { return "Hello World" }
+  }
