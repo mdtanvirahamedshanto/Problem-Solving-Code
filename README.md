@@ -4,8 +4,8 @@ All Site Problem Solve Code In C++ , javaScript & Python
 
 - List of Documention
 
-1. [Link-List](https://github.com/mdtanvirahamedshanto/Problem-Solving-Code)
-2. [Data-Structure](https://github.com/mdtanvirahamedshanto/Problem-Solving-Code)
+1. [Link-List](https://github.com/mdtanvirahamedshanto/Problem-Solving-Code/blob/main/Document/linked-list-explained/Readme.md)
+2. [Data-Structure](https://github.com/mdtanvirahamedshanto/Problem-Solving-Code/blob/main/Document/Data-Structure-Algorithms/README.md)
 
 ### Connect with me:
 
