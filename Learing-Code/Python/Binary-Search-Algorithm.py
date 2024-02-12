@@ -16,7 +16,7 @@ def binarySearch(arr, l, r, x):
 
     # If we reach here, then the element
     # was not present
-    return -1
+    return -1 
 
 
 # Driver Code
