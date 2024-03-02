@@ -12,4 +12,11 @@ const metting = new Promise((resolve, reject) => {
     reject(new Error("already have metting"));
   }
 });
-console.log(metting());
+
+metting
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
